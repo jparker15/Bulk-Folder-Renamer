@@ -17,7 +17,13 @@ const directoriesInDirectory = fs.readdirSync(filePath, { withFileTypes: true })
 
 const dires = fs.readdirSync(filePath, { withFileTypes: true}).filter((dire) => dire.isDirectory());
 dires.forEach(dire => {
-    console.log(dire.name);
+    let newName = dire.name;
+    newName = newName.replace(/\./g, ' ');
+
+    const oldPath = path.join(filePath, dire.name);
+    const newPath = path.join(filePath, newName);
+    fs.renameSync(oldPath, newPath)
+    console.log(newName + ' Done...');
 })
 // console.log(dires);
 // let arr = [];
