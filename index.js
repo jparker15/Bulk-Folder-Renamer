@@ -12,11 +12,16 @@ const dires = fs.readdirSync(filePath, { withFileTypes: true}).filter((dire) => 
         dires.forEach(dire => {
             
             let newName = dire.name;
-            //replaces all periods with spaces using Regular Expressions
+            // replaces all periods with spaces using Regular Expressions
             newName = newName.replace(/\./g, ' ');
-            //replaces all spaces with periods
+            // replaces all spaces with periods
             // newName = newName.replace(/\s+/g, '.');
-            // const noSpecialChars = item.replace(/[^a-zA-Z0-9 ]/g, ' ');
+
+            // remove ALL special charcters 
+            // const noSpecialChars = newName.replace(/[^a-zA-Z0-9 ]/g, ' ');
+
+            // remove specific phrases
+            // const clean = newName.replace('-RARBG'/g, '');
 
             console.log(dire.name + " ---> ");
             const oldPath = path.join(filePath, dire.name);
@@ -24,4 +29,4 @@ const dires = fs.readdirSync(filePath, { withFileTypes: true}).filter((dire) => 
             fs.renameSync(oldPath, newPath)
             console.log(newName);
         })
-
+  
