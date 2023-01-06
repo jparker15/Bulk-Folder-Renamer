@@ -1,6 +1,6 @@
 # Bulk-Renamer
 
-A Node.js script to remove special characters from names of  all files or folders.
+A Node.js script to remove special characters from names of folders / directories .
 
 ## How to run the script
 
@@ -10,20 +10,16 @@ A Node.js script to remove special characters from names of  all files or folder
     > for Windows optional install [Git Bash](https://git-scm.com/downloads) 
 * download zip or  `git clone` repo 
 
-* navigate terminal shell to location of script i.e.
-    * *~/VSCode/Bulk-Folder-Renamer/index.js* 
+* use VSCode to open the folder or repo
 
-    * *C:\Users\user-name\Downloads\Bulk-Folder-Renamer-mini*
-
-
+* change `filePath` in `index.js` to the file path of the folder containing the folders to be renamed 
+    ![filepath-example](/filepathsnip.PNG)
 
 * run `node index.js` command 
+ 
+### Before :
+![before-pic](/before.PNG)
 
-## Sources :
-
-[#1 Scripting Magic: Javascript | Rename Bulk Files using Javascript | Bangla](https://www.youtube.com/watch?v=wEyEd5J8xFs)
-![code snippet](/youtubecode.PNG)
-
-https://www.coderrocketfuel.com/article/how-to-rename-a-directory-in-node-js
-
-https://dirask.com/posts/Node-js-list-all-directories-in-directory-pBvaMp
+### After :
+![after-pic](/after.PNG)
+ 
